@@ -152,19 +152,12 @@ brew "hub"
 # Image manipulation
 brew "imagemagick"
 
-# Testing
-brew "qt"
-
 # Programming languages
 brew "libyaml" # should come after openssl
 brew "node"
 brew "chruby"
 brew "ruby-install"
 brew "ruby-build"
-
-# Databases
-brew "postgres", restart_service: true
-brew "redis", restart_service: true
 
 # Docker
 brew "docker"
@@ -176,10 +169,11 @@ brew_install_or_upgrade 'brew-cask'
 
 # Desktop Applications
 brew_cask_install_or_upgrade 'dropbox'
-brew_cask_install 'google-chrome'
-brew_cask_install 'java'
-brew_cask_install 'intellij-idea'
-brew_cask_install 'battle-net'
+brew_cask_install_or_upgrade 'google-chrome'
+brew_cask_install_or_upgrade 'java'
+brew_cask_install_or_upgrade 'intellij-idea'
+brew_cask_install_or_upgrade 'battle-net'
+brew_cask_install_or_upgrade 'atom'
 
 EOF
 
@@ -195,6 +189,7 @@ ruby_version="$(find_latest_ruby)"
 
 gem update --system
 gem_install_or_update 'bundler'
+gem_install_or_update 'aws-lanes'
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
