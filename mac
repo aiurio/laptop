@@ -179,6 +179,7 @@ brew_cask_install_or_upgrade 'dropbox'
 brew_cask_install 'google-chrome'
 brew_cask_install 'java'
 brew_cask_install 'intellij-idea'
+brew_cask_install 'battle-net'
 
 EOF
 
