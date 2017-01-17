@@ -8,7 +8,7 @@
 
 
 # allow our custom zsh to be the boss 
-grep -qe "/usr/local/bin/zsh" /etc/shells || echo "/usr/local/bin/zsh" >> /etc/shells
+grep -qe "/usr/local/bin/zsh" /etc/shells || sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
 
 
 
