@@ -67,7 +67,7 @@ brew_cask_install() {
   fi
 }
 
-brew_cask_install_or_upgrade() {e
+brew_cask_install_or_upgrade() {
   if brew_cask_is_installed "$1"; then
     echo "$1 is already installed, brew cask upgrade is not yet implemented"
   else
