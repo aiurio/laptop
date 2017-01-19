@@ -179,7 +179,7 @@ brew "docker-compose"
 EOF
 
 brew tap caskroom/cask
-brew install 'brew-cask-completion'
+brew install 'homebrew/completions/brew-cask-completion'
 
 # Desktop Applications
 brew_cask_install_or_upgrade 'dropbox'
